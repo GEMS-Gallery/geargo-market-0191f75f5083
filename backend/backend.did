@@ -1,0 +1,16 @@
+type CarPart = 
+ record {
+   cpid: text;
+   description: text;
+   imageUrl: opt text;
+   price: float64;
+   stock: nat;
+   title: text;
+ };
+service : {
+  addCarPart: (CarPart) -> ();
+  deleteCarPart: (text) -> (bool);
+  getCarPart: (text) -> (opt CarPart) query;
+  listCarParts: () -> (vec CarPart) query;
+  updateCarPart: (CarPart) -> (bool);
+}

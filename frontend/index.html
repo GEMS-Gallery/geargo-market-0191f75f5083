@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parts E-commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+        }
+        .car-parts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .car-part {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .car-part img {
+            max-width: 100%;
+            height: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin-bottom: 2rem;
+        }
+        input, textarea {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Parts E-commerce</h1>
+    </header>
+    <main>
+        <h2>Add New Car Part</h2>
+        <form id="addCarPartForm">
+            <input type="text" id="cpid" placeholder="CPID" required>
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <input type="number" id="price" placeholder="Price" step="0.01" required>
+            <input type="url" id="imageUrl" placeholder="Image URL (optional)">
+            <button type="submit">Add Car Part</button>
+        </form>
+        <h2>Car Parts</h2>
+        <div id="carPartsList" class="car-parts-list"></div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
