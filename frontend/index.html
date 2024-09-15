@@ -43,6 +43,19 @@
         input, textarea {
             margin-bottom: 1rem;
         }
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +63,7 @@
         <h1>Car Parts E-commerce</h1>
     </header>
     <main>
+        <div id="messageContainer"></div>
         <h2>Add New Car Part</h2>
         <form id="addCarPartForm">
             <input type="text" id="cpid" placeholder="CPID" required>
